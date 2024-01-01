@@ -1,0 +1,12 @@
+
+<form>
+    <input type="text" id="operatorDisplay" [value]="nums[2].id + nums[0].value" name="operatorDisplay" disabled><br> <!--displays operator and next input number-->
+</form>
+
+<ng-container *ngFor= "let item of [].constructor(9); let i = index"> 
+<button type="button" (click)='numberClick(i+1)' class="numberButton"> {{i+1}}</button><br *ngIf="(i+1)%3==0"> <!--creates html buttons that count up to 9, adding a break every 3rd-->
+</ng-container>
+<button type="button" (click)='turnNegative()'class="numberButton">negative</button>
+<button type="button" (click)='numberClick(0)'class="numberButton"> 0 </button>
+<button type="button" class="numberButton">  &nbsp; </button><br>
+
